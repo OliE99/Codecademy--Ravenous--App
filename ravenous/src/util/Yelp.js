@@ -1,4 +1,12 @@
-const apiKey = 'nblbeEIcn18L4VqN34Dgu5_pw-EIgJ_8oTJBT_neyIIvJGhemFdoN1RY42tA86r785YtQCSLeLIdZQIiHu3bu6gjGdYqN4lPE-l_EaOWXARVbrBZrB28qqAwjTedZXYx'; // Insert API key here.
+// Import the dotenv package
+import dotenv from "dotenv";
+
+// Inject environment variables
+dotenv.config();
+
+const apiKey = {
+  apiKey: `${process.env.REACT_APP_API_KEY}`
+}
 
 const Yelp = {
   search(term, location, sortBy) {
