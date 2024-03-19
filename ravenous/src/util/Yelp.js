@@ -1,12 +1,4 @@
-// Import the dotenv package
-import dotenv from "dotenv";
-
-// Inject environment variables
-dotenv.config();
-
-const apiKey = {
-  apiKey: `${process.env.REACT_APP_API_KEY}`
-}
+const apiKey = process.env.REACT_APP_API_KEY;
 
 const Yelp = {
   search(term, location, sortBy) {
